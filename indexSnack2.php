@@ -3,13 +3,13 @@ $nomeUtente = $_GET["nome"];
 $emailUtente = $_GET["email"];
 $etaUtente = $_GET["eta"];
 
-if (strlen($nomeUtente) >= 3 && is_numeric($etaUtente)) {
+
+
+if (strlen($nomeUtente) >= 3 && is_numeric($etaUtente) && filter_var($emailUtente, FILTER_VALIDATE_EMAIL)) {
     echo "accesso riuscito";
 } else {
     echo "accesso negato";
 }
-
-
 
 ?>
 
