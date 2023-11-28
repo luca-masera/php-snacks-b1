@@ -23,6 +23,18 @@ $games = [
         "teamOut" => "Rockets",
         "homeScore" => 118,
         "outScore" => 95,
+    ],
+    [
+        "teamHome" => "Golden State",
+        "teamOut" => "Timberwolves",
+        "homeScore" => 110,
+        "outScore" => 111,
+    ],
+    [
+        "teamHome" => "Cavaliers",
+        "teamOut" => "Wizard",
+        "homeScore" => 99,
+        "outScore" => 92,
     ]
 ]
     ?>
@@ -40,7 +52,15 @@ $games = [
 </head>
 
 <body>
-    <h1>ciao</h1>
+    <!--SNACK 1-->
+
+    <?php
+
+    foreach ($games as $game) {
+        echo "<div>" . $game["teamHome"] . ' - ' . $game["teamOut"] . ' | ' . $game["homeScore"] . ' - ' . $game["outScore"] . "</div>";
+    }
+    ?>
+
 </body>
 
 </html>
